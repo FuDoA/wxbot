@@ -1,0 +1,11 @@
+from wxpy import *
+bot=Bot(console_qr=True, cache_path=True)
+bot.enable_puid(path='wxpy_puid.pkl')
+
+bot.self.send('Hello World!')
+bot.file_helper.send('Hello World!')
+
+my_friend = bot.friends().search('朔月')[0]
+
+
+print(my_friend.puid)
